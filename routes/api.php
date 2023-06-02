@@ -18,6 +18,12 @@ use Illuminate\Validation\ValidationException;
 |
 */
 
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'Hello world'
+    ]);
+});
+
 // register route
 Route::post('/register', [AuthController::class, 'register']);
 
