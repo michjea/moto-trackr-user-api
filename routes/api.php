@@ -24,6 +24,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'Test route'
+    ]);
+});
+
 // register route
 Route::post('/register', [AuthController::class, 'register']);
 
