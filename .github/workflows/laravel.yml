@@ -20,6 +20,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            cd sites/moto-tracker-user-api.jeanne-michel.pro/moto-tracker-user-api/
             php artisan down
             git pull origin production
             composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
