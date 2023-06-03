@@ -1,6 +1,6 @@
 # Deploy to Infomaniak web hosting
 
-name: Laravel
+name: Deploy
 
 on:
   push:
