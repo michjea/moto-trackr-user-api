@@ -50,7 +50,23 @@ class AuthController extends Controller
             ], 401);
         }
 
+        // Vérifier si l'utilisateur a déjà un jeton
+        if ($user->currentAccessToken()) {
+            // Retourner le jeton existant
+
+            $output = new \Symfony\Component\Console\Output\ConsoleOutput();
+            $output->writeln("User already has a token " . $user->currentAccessToken()->plainTextToken);
+
+            return response()->json([
+                'user' => $user,
+                'token' => $user->currentAccessToken()->plainTextToken
+            ], 200);
+        }
+
         $token = $user->createToken($request->device_name)->plainTextToken;
+
+        $output = new \Symfony\Component\Console\Output\ConsoleOutput();
+        $output->writeln("User has a new token " . $token);
 
         return response()->json([
             'user' => $user,

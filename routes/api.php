@@ -18,23 +18,12 @@ use Illuminate\Validation\ValidationException;
 |
 */
 
-Route::get('/', function () {
-    return response()->json([
-        'message' => 'Hello world'
-    ]);
-});
-
-Route::get('/test', function () {
-    return response()->json([
-        'message' => 'Test route'
-    ]);
-});
-
 // register route
-Route::post('/register', [AuthController::class, 'register']);
+Route::post('/auth/register', [AuthController::class, 'register']);
+
 
 // Mobile authentication
-Route::post('/sanctum/token', [AuthController::class, 'token']);
+Route::post('/auth/login', [AuthController::class, 'token']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

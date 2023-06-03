@@ -20,7 +20,7 @@ Get routes using `php artisan route:list`.
 
 #### Register
 
-`POST /api/register`
+`POST /api/auth/register`
 
 ##### Request
 
@@ -30,6 +30,35 @@ Get routes using `php artisan route:list`.
     "email": "johndoe@example.com",
     "password": "mysupersecurepassword",
     "password_confirmation": "mysupersecurepassword",
+    "device_name": "Postman"
+}
+```
+
+##### Response
+
+```json
+{
+    "user": {
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "updated_at": "2023-06-02T17:28:42.000000Z",
+        "created_at": "2023-06-02T17:28:42.000000Z",
+        "id": 1
+    },
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
+}
+```
+
+#### Login
+
+`POST /api/auth/login`
+
+##### Request
+
+```json
+{
+    "email": "johndoe@example.com",
+    "password": "mysupersecurepassword",
     "device_name": "Postman"
 }
 ```

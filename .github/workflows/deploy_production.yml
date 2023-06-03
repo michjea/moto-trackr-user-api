@@ -23,10 +23,6 @@ jobs:
             cd sites/moto-tracker-user-api.jeanne-michel.pro/moto-tracker-user-api/
             php artisan down
             php artisan cache:clear
-            php artisan config:clear
-            php artisan event:clear
-            php artisan route:clear
-            php artisan view:clear
             git pull origin production
             composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
             php artisan migrate --force
