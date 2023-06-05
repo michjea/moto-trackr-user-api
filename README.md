@@ -6,13 +6,17 @@ This is the user API for the Moto Tracker application.
 
 ## Installation and Setup Instructions for Local Development
 
-Start Apache and MySQL servers using XAMPP.
+1. Clone this repository.
 
-Apply migrations using `php artisan migrate`.
+2. Start Apache and MySQL servers using XAMPP.
 
-Start server using `php artisan serve`.
+3. Generate key using `php artisan key:generate`.
 
-Get routes using `php artisan route:list`.
+4. Apply migrations using `php artisan migrate`.
+
+5. Start server using `php artisan serve`.
+
+-   Get routes using `php artisan route:list`.
 
 ## API Endpoints
 
