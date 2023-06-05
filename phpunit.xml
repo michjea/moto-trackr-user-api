@@ -22,7 +22,10 @@
             <directory suffix=".php">./app/Providers</directory>
             <directory suffix=".php">./app/Console</directory>
             <directory suffix=".php">./app/Actions</directory>
+<<<<<<< HEAD
             <directory suffix=".php">./app/Models</directory>
+=======
+>>>>>>> 1023089 (anged deploy pipeline to match new route)
         </exclude>
     </source>
     <php>

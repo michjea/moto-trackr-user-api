@@ -15,8 +15,12 @@ Composer install using `composer install`.
 
 Generate application key using `php artisan key:generate`.
 
+<<<<<<< HEAD
 Apply migrations using `php artisan migrate`.
 >>>>>>> c34fabb (changed deploy pipeline to match new route)
+=======
+Apply migrations using `php artisan migrate`. 2. Start Apache and MySQL servers using XAMPP.
+>>>>>>> 1023089 (anged deploy pipeline to match new route)
 
 3. Generate key using `php artisan key:generate`.
 
