@@ -22,6 +22,7 @@
             <directory suffix=".php">./app/Providers</directory>
             <directory suffix=".php">./app/Console</directory>
             <directory suffix=".php">./app/Actions</directory>
+            <directory suffix=".php">./app/Models</directory>
         </exclude>
     </source>
     <php>
