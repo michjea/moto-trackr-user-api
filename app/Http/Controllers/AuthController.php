@@ -34,7 +34,7 @@ class AuthController extends Controller
         ], 201);
     }
 
-    public function token(Request $request)
+    public function token(Request $request) // login function
     {
         $request->validate([
             'email' => 'required|email',
