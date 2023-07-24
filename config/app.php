@@ -169,6 +169,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
+
+        App\Providers\Neo4jServiceProvider::class,
     ])->toArray(),
 
     /*
