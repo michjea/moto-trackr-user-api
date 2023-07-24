@@ -9,13 +9,19 @@ This is the user API for the Moto Trackr application.
 1. Clone this repository.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 2. Start Apache and MySQL servers using XAMPP.
 =======
+=======
+>>>>>>> c34fabb (changed deploy pipeline to match new route)
 Composer install using `composer install`.
 
 Generate application key using `php artisan key:generate`.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c34fabb (changed deploy pipeline to match new route)
 Apply migrations using `php artisan migrate`.
 >>>>>>> c34fabb (changed deploy pipeline to match new route)
 =======
