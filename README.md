@@ -1,14 +1,22 @@
-# Moto Tracker User API
+# Moto Trackr User API
 
 ## Description
 
-This is the user API for the Moto Tracker application.
+This is the user API for the Moto Trackr application.
 
 ## Installation and Setup Instructions for Local Development
 
 1. Clone this repository.
 
+<<<<<<< HEAD
 2. Start Apache and MySQL servers using XAMPP.
+=======
+Composer install using `composer install`.
+
+Generate application key using `php artisan key:generate`.
+
+Apply migrations using `php artisan migrate`.
+>>>>>>> c34fabb (changed deploy pipeline to match new route)
 
 3. Generate key using `php artisan key:generate`.
 
