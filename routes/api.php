@@ -26,7 +26,13 @@ use Illuminate\Validation\ValidationException;
 // add test route
 Route::get('/', function () {
     return response()->json([
-        'message' => 'Hello World!',
+        'message' => 'API route',
+    ], 200);
+});
+
+Route::get('/google-maps-api-key', function () {
+    return response()->json([
+        env('GOOGLE_MAPS_API_KEY'),
     ], 200);
 });
 
@@ -43,9 +49,9 @@ Route::post('/auth/login', [AuthController::class, 'token']);
 
 // Group middleware routes
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::get('/feed', [FeedController::class, 'index']);
-
     Route::resource('ride', RideController::class)->except(['create', 'edit']);
+
+    Route::get('/feed', [FeedController::class, 'index']);
 
     Route::get('/users/me', [UserController::class, 'me']);
     Route::get('/user/following', [UserController::class, 'following']);

@@ -30,6 +30,10 @@ class RideController extends Controller
      */
     public function store(Request $request)
     {
+        // log the request
+        $output = new \Symfony\Component\Console\Output\ConsoleOutput();
+        $output->writeln("Request store ride");
+
         // Validate and store the request...
         $validated = $request->validate([
             'title' => 'required|string|max:255',
@@ -41,6 +45,8 @@ class RideController extends Controller
             'avg_speed' => 'numeric',
             'positions' => 'array',
         ]);
+
+        $output->writeln("Validated");
 
         $ride = new Ride();
         $ride->title = $validated['title'];
@@ -54,6 +60,8 @@ class RideController extends Controller
         $ride->user_id = $request->user()->id;
 
         $ride->save();
+
+        $output->writeln("Ride created: " . $ride);
 
         return response()->json([
             'message' => 'Ride created'

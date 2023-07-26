@@ -22,6 +22,6 @@ Route::get('/', function () {
 // test route
 Route::get('/test', function () {
     return response()->json([
-        'message' => 'Hello World!',
+        'message' => 'Test route',
     ], 200);
 });

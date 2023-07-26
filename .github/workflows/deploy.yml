@@ -28,6 +28,7 @@ jobs:
             php artisan migrate --force
             php artisan up
 
+# Maybe cache is breaking the deploy ? Not safe to use in critical moment
 # php artisan config:cache
 # php artisan event:cache
 # php artisan route:cache
