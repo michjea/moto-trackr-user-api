@@ -20,16 +20,27 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd sites/moto-trackr.jeanne-michel.pro/moto-trackr-user-api/
-            php artisan down
-            php artisan cache:clear
-            git pull origin production
-            composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+            cd sites/moto-trackr.jeanne-michel.pro
+            cp moto-trackr-user-api/.env .env
+            rm -rf moto-trackr-user-api
+            git clone https://github.com/michjea/moto-trackr-user-api.git
+            git checkout production
+            cp .env moto-trackr-user-api/.env
+            cd moto-trackr-user-api/
+            composer install
+            php artisan key:generate
             php artisan migrate --force
-            php artisan up
+            php artisan storage:link
 
 # Maybe cache is breaking the deploy ? Not safe to use in critical moment
 # php artisan config:cache
 # php artisan event:cache
 # php artisan route:cache
 # php artisan view:cache
+
+#php artisan down
+#php artisan cache:clear
+#git pull origin production
+#composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+#php artisan migrate --force
+#php artisan up
