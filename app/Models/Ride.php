@@ -22,11 +22,13 @@ class Ride extends Model
         'max_speed',
         'avg_speed',
         'positions',
+        'route'
     ];
 
     // Casts
     protected $casts = [
         'positions' => 'array',
+        'route' => 'array'
     ];
 
     // User can create many rides

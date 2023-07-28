@@ -4,9 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/**
+ * @group Feed
+ *
+ * APIs pour le fil d'actualité
+ */
 class FeedController extends Controller
 {
-    //
+    /**
+     * Afficher les trajets des utilisateurs suivis par l'utilisateur authentifié
+     *
+     * Affiche les trajets des utilisateurs suivis par l'utilisateur authentifié. Les trajets sont affichés par ordre décroissant de date de création.
+     *
+     * @queryParam offset integer Le nombre de trajets à ignorer. Defaults to 0.
+     * @queryParam limit integer Le nombre de trajets à afficher. Defaults to 10.
+     */
     public function index(Request $request)
     {
         $userId = auth()->user()->id;

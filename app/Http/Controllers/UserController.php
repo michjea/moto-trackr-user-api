@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * @authenticated
+ * @group Users
+ *
+ * APIs pour gérer les utilisateurs
+ */
 class UserController extends Controller
 {
     /**
@@ -17,6 +23,7 @@ class UserController extends Controller
 
     /**
      * Show the current user's profile.
+     * @authenticated
      */
     public function me(Request $request)
     {
@@ -53,7 +60,10 @@ class UserController extends Controller
         ]);
     }
 
-    // Get the user's following list
+    /**
+     * Get the user's following list.
+     * @authenticated
+     */
     public function following(Request $request)
     {
         $output = new \Symfony\Component\Console\Output\ConsoleOutput();
@@ -75,7 +85,10 @@ class UserController extends Controller
         ]);
     }
 
-    // Get the user's followers list
+    /**
+     * Get the user's followers list.
+     * @authenticated
+     */
     public function followers(Request $request)
     {
         $output = new \Symfony\Component\Console\Output\ConsoleOutput();
@@ -107,6 +120,10 @@ class UserController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @bodyParam name string required The name of the user.
+     * @bodyParam email string required The email of the user.
+     * @bodyParam password string required The password of the user.
+     * @bodyParam password_confirmation string required The password confirmation of the user.
      */
     public function store(Request $request)
     {
@@ -130,6 +147,7 @@ class UserController extends Controller
 
     /**
      * Display the specified resource.
+     * @urlParam id string required The ID of the user.
      */
     public function show(string $id)
     {
@@ -148,7 +166,7 @@ class UserController extends Controller
         // Return the user's profile, rides and followers
         return response()->json([
             'user' => $user,
-            'rides' => $rides,
+            'public_rides' => $rides,
             'followers' => $followers,
             'following' => $following,
         ]);
@@ -164,6 +182,11 @@ class UserController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * @urlParam id string required The ID of the user.
+     * @bodyParam name string The name of the user.
+     * @bodyParam email string The email of the user.
+     * @bodyParam password string The password of the user.
+     * @bodyParam password_confirmation string The password confirmation of the user.
      */
     public function update(Request $request, string $id)
     {
@@ -197,6 +220,7 @@ class UserController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * @urlParam id string required The ID of the user.
      */
     public function destroy(string $id)
     {
@@ -210,6 +234,10 @@ class UserController extends Controller
         ], 204);
     }
 
+    /**
+     * Search users.
+     * @queryParam query string required The query to search for.
+     */
     public function searchUsers(Request $request)
     {
         $output = new \Symfony\Component\Console\Output\ConsoleOutput();
@@ -258,6 +286,11 @@ class UserController extends Controller
         return response()->json($searchResults);
     }
 
+    /**
+     * Follow a user.
+     * @urlParam id string required The ID of the user to follow.
+     * @authenticated
+     */
     public function follow(Request $request, string $id)
     {
         // Save the follow relationship in Neo4j
@@ -301,6 +334,11 @@ class UserController extends Controller
         ], 201);
     }
 
+    /**
+     * Unfollow a user.
+     * @urlParam id string required The ID of the user to unfollow.
+     * @authenticated
+     */
     public function unfollow(Request $request, string $id)
     {
         // Delete the follow relationship in Neo4j

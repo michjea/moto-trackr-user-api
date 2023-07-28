@@ -75,6 +75,8 @@ class User extends Authenticatable
             ];
 
             $neo4j->run($query, $parameters);
+
+            $output->writeln("User " . $user->id . " created in Neo4j");
         });
 
         // Delete User in Neo4j

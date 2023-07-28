@@ -24,11 +24,11 @@ jobs:
             cp moto-trackr-user-api/.env .env
             rm -rf moto-trackr-user-api
             git clone https://github.com/michjea/moto-trackr-user-api.git
-            git checkout production
             cp .env moto-trackr-user-api/.env
             cd moto-trackr-user-api/
+            git checkout production
             composer install
-            php artisan key:generate
+            echo yes | php artisan key:generate
             php artisan migrate --force
             php artisan storage:link
 

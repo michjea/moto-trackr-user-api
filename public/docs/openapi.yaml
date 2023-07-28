@@ -1,0 +1,702 @@
+openapi: 3.0.3
+info:
+  title: moto-trackr-user-api
+  description: 'API for the Moto Trackr app'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/auth/register:
+    post:
+      summary: ''
+      operationId: postApiAuthRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: "Le nom de l'utilisateur"
+                  example: est
+                email:
+                  type: string
+                  description: "L'adresse email de l'utilisateur"
+                  example: lauriane62@example.net
+                password:
+                  type: string
+                  description: "Le mot de passe de l'utilisateur"
+                  example: '7DVcfbQU>b::'
+                device_name:
+                  type: string
+                  description: "Le nom du périphérique de l'utilisateur"
+                  example: beatae
+                password_confirmation:
+                  type: string
+                  description: "La confirmation du mot de passe de l'utilisateur"
+                  example: et
+              required:
+                - name
+                - email
+                - password
+                - device_name
+                - password_confirmation
+      security: []
+  /api/auth/login:
+    post:
+      summary: ''
+      operationId: postApiAuthLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: "L'adresse email de l'utilisateur"
+                  example: nienow.serena@example.org
+                password:
+                  type: string
+                  description: "Le mot de passe de l'utilisateur"
+                  example: 'l0fn*^Y'
+                device_name:
+                  type: string
+                  description: "Le nom du périphérique de l'utilisateur"
+                  example: voluptatem
+              required:
+                - email
+                - password
+                - device_name
+      security: []
+  /api/google-maps-api-key:
+    get:
+      summary: ''
+      operationId: getApiGoogleMapsApiKey
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example:
+                  - AIzaSyDxQ8xL95GLxwFFpCNZd157j9Tw0e4he4Y
+      tags:
+        - Endpoints
+  /api/feed:
+    get:
+      summary: "Afficher les trajets des utilisateurs suivis par l'utilisateur authentifié"
+      operationId: afficherLesTrajetsDesUtilisateursSuivisParLutilisateurAuthentifi
+      description: "Affiche les trajets des utilisateurs suivis par l'utilisateur authentifié. Les trajets sont affichés par ordre décroissant de date de création."
+      parameters:
+        -
+          in: query
+          name: offset
+          description: 'Le nombre de trajets à ignorer. Defaults to 0.'
+          example: 11
+          required: false
+          schema:
+            type: integer
+            description: 'Le nombre de trajets à ignorer. Defaults to 0.'
+            example: 11
+        -
+          in: query
+          name: limit
+          description: 'Le nombre de trajets à afficher. Defaults to 10.'
+          example: 11
+          required: false
+          schema:
+            type: integer
+            description: 'Le nombre de trajets à afficher. Defaults to 10.'
+            example: 11
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Feed
+  /api/ride:
+    get:
+      summary: ''
+      operationId: getApiRide
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Rides
+    post:
+      summary: ''
+      operationId: postApiRide
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Rides
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Le titre du trajet'
+                  example: voluptate
+                description:
+                  type: string
+                  description: 'La description du trajet'
+                  example: 'Tempora autem modi similique et eaque.'
+                public:
+                  type: boolean
+                  description: 'Le trajet est-il public ?'
+                  example: true
+                distance:
+                  type: numeric
+                  description: 'La distance du trajet'
+                  example: ipsa
+                duration:
+                  type: numeric
+                  description: 'La durée du trajet'
+                  example: debitis
+                max_speed:
+                  type: numeric
+                  description: 'La vitesse maximale du trajet'
+                  example: in
+                avg_speed:
+                  type: numeric
+                  description: 'La vitesse moyenne du trajet'
+                  example: sit
+                positions:
+                  type: array
+                  description: 'Les positions du trajet'
+                  example:
+                    - rerum
+                  items:
+                    type: string
+                route:
+                  type: array
+                  description: 'La route du trajet'
+                  example:
+                    - consequatur
+                  items:
+                    type: string
+              required:
+                - title
+  '/api/ride/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Rides
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Rides
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Le titre du trajet'
+                  example: odit
+                description:
+                  type: string
+                  description: 'La description du trajet'
+                  example: 'Velit vitae earum iure sit et quia.'
+                public:
+                  type: boolean
+                  description: 'Le trajet est-il public ?'
+                  example: true
+                distance:
+                  type: numeric
+                  description: 'La distance du trajet'
+                  example: repudiandae
+                duration:
+                  type: numeric
+                  description: 'La durée du trajet'
+                  example: necessitatibus
+                max_speed:
+                  type: numeric
+                  description: 'La vitesse maximale du trajet'
+                  example: asperiores
+                avg_speed:
+                  type: numeric
+                  description: 'La vitesse moyenne du trajet'
+                  example: rem
+                positions:
+                  type: array
+                  description: 'Les positions du trajet'
+                  example:
+                    - aut
+                  items:
+                    type: string
+                route:
+                  type: array
+                  description: 'La route du trajet'
+                  example:
+                    - et
+                  items:
+                    type: string
+              required:
+                - title
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Rides
+    parameters:
+      -
+        in: path
+        name: id
+        description: "L'identifiant du trajet"
+        example: ut
+        required: true
+        schema:
+          type: string
+  /api/users/me:
+    get:
+      summary: "Show the current user's profile."
+      operationId: showTheCurrentUsersProfile
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Users
+  /api/user/following:
+    get:
+      summary: "Get the user's following list."
+      operationId: getTheUsersFollowingList
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Users
+  /api/user/followers:
+    get:
+      summary: "Get the user's followers list."
+      operationId: getTheUsersFollowersList
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Users
+  /api/user:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the user.'
+                  example: nulla
+                email:
+                  type: string
+                  description: 'The email of the user.'
+                  example: buddy72@example.net
+                password:
+                  type: string
+                  description: 'The password of the user.'
+                  example: ',}uDe=`QVlr'
+                password_confirmation:
+                  type: string
+                  description: 'The password confirmation of the user.'
+                  example: dolorem
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+  '/api/user/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Users
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Users
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the user.'
+                  example: et
+                email:
+                  type: string
+                  description: 'The email of the user.'
+                  example: sipes.paige@example.org
+                password:
+                  type: string
+                  description: 'The password of the user.'
+                  example: "*O/._@p?'e'*m7\\+x|"
+                password_confirmation:
+                  type: string
+                  description: 'The password confirmation of the user.'
+                  example: quia
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Users
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: aut
+        required: true
+        schema:
+          type: string
+  /api/users/search:
+    get:
+      summary: 'Search users.'
+      operationId: searchUsers
+      description: ''
+      parameters:
+        -
+          in: query
+          name: query
+          description: 'The query to search for.'
+          example: enim
+          required: true
+          schema:
+            type: string
+            description: 'The query to search for.'
+            example: enim
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Users
+  '/api/user/{id}/unfollow':
+    delete:
+      summary: 'Unfollow a user.'
+      operationId: unfollowAUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Users
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user to unfollow.'
+        example: deleniti
+        required: true
+        schema:
+          type: string
+  '/api/user/{id}/follow':
+    post:
+      summary: 'Follow a user.'
+      operationId: followAUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Users
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user to follow.'
+        example: excepturi
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Authentification
+    description: "\nAPIs pour l'authentification et l'enregistrement des utilisateurs"
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Feed
+    description: "\nAPIs pour le fil d'actualité"
+  -
+    name: Rides
+    description: "\nAPIs pour gérer les trajets"
+  -
+    name: Users
+    description: "\nAPIs pour gérer les utilisateurs"
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []

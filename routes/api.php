@@ -49,7 +49,7 @@ Route::post('/auth/login', [AuthController::class, 'token']);
 
 // Group middleware routes
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::resource('ride', RideController::class)->except(['create', 'edit']);
+    Route::resource('ride', RideController::class)->except(['create', 'edit'])->middleware('api');
 
     Route::get('/feed', [FeedController::class, 'index']);
 

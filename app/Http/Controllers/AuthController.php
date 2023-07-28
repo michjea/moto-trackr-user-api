@@ -8,8 +8,24 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @unauthenticated
+ * @group Authentification
+ *
+ * APIs pour l'authentification et l'enregistrement des utilisateurs
+ */
 class AuthController extends Controller
 {
+    /**
+     * @unauthenticated
+     * Enregistrer un nouvel utilisateur
+     *
+     * @bodyParam name string required Le nom de l'utilisateur
+     * @bodyParam email string required L'adresse email de l'utilisateur
+     * @bodyParam password string required Le mot de passe de l'utilisateur
+     * @bodyParam password_confirmation string required La confirmation du mot de passe de l'utilisateur
+     * @bodyParam device_name string required Le nom du périphérique de l'utilisateur
+     */
     public function register(Request $request)
     {
         // Validate the request...
@@ -34,6 +50,14 @@ class AuthController extends Controller
         ], 201);
     }
 
+    /**
+     * @unauthenticated
+     * Connecter un utilisateur
+     *
+     * @bodyParam email string required L'adresse email de l'utilisateur
+     * @bodyParam password string required Le mot de passe de l'utilisateur
+     * @bodyParam device_name string required Le nom du périphérique de l'utilisateur
+     */
     public function token(Request $request) // login function
     {
         $request->validate([
