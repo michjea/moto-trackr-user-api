@@ -28,31 +28,27 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        $output = new \Symfony\Component\Console\Output\ConsoleOutput();
-        $output->writeln("User is registering");
+        //$output = new \Symfony\Component\Console\Output\ConsoleOutput();
+        //$output->writeln("User is registering");
 
-        // Validate the request...
-        $validated = $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users|max:255',
             'password' => ['required', 'string', 'confirmed', Password::min(8)->uncompromised(), 'max:255'],
             'device_name' => 'required|string|max:255'
         ]);
 
+        if ($validator->fails()) {
+            //$output->writeln("User registration failed");
+            return response()->json($validator->errors(), 422);
+        }
 
-        $output->writeln("User " . $validated['name'] . " is registering");
+        $validated = $validator->validated();
 
-        $user = new User();
-        $user->name = $validated['name'];
-        $user->email = $validated['email'];
-        $user->password = Hash::make($validated['password']);
-        $user->save();
-
-        $output->writeln("User " . $validated['name'] . " has been registered");
-
+        $user = User::create($validated);
         $token = $user->createToken($validated['device_name'])->plainTextToken;
 
-        $output->writeln("User " . $validated['name'] . " has a new token " . $token);
+        //$output->writeln("User " . $validated['name'] . " has a new token " . $token);
 
         return response()->json([
             'user' => $user,
