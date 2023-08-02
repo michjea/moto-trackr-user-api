@@ -31,19 +31,19 @@ endpoints:
         name: offset
         description: 'Le nombre de trajets à ignorer. Defaults to 0.'
         required: false
-        example: 11
+        example: 13
         type: integer
         custom: []
       limit:
         name: limit
         description: 'Le nombre de trajets à afficher. Defaults to 10.'
         required: false
-        example: 11
+        example: 17
         type: integer
         custom: []
     cleanQueryParameters:
-      offset: 11
-      limit: 11
+      offset: 13
+      limit: 17
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -61,7 +61,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1Dv4EV3k6dPbc5a6haefg8Z'
+      - 'Bearer eEhdbkv1VPZ5a8agcf6D364'
     controller: null
     method: null
     route: null

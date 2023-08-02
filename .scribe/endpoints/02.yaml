@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Dc46a53ePafb861dkZhgEVv'
+      - 'Bearer 4Z3gaEPbk1D6chV58efavd6'
     controller: null
     method: null
     route: null
@@ -76,14 +76,14 @@ endpoints:
         name: title
         description: 'Le titre du trajet'
         required: true
-        example: voluptate
+        example: modi
         type: string
         custom: []
       description:
         name: description
         description: 'La description du trajet'
         required: false
-        example: 'Tempora autem modi similique et eaque.'
+        example: 'Eos excepturi aliquam inventore possimus quasi at voluptatem.'
         type: string
         custom: []
       public:
@@ -97,28 +97,28 @@ endpoints:
         name: distance
         description: 'La distance du trajet'
         required: false
-        example: ipsa
+        example: illo
         type: numeric
         custom: []
       duration:
         name: duration
         description: 'La durée du trajet'
         required: false
-        example: debitis
+        example: saepe
         type: numeric
         custom: []
       max_speed:
         name: max_speed
         description: 'La vitesse maximale du trajet'
         required: false
-        example: in
+        example: necessitatibus
         type: numeric
         custom: []
       avg_speed:
         name: avg_speed
         description: 'La vitesse moyenne du trajet'
         required: false
-        example: sit
+        example: voluptatem
         type: numeric
         custom: []
       positions:
@@ -126,7 +126,7 @@ endpoints:
         description: 'Les positions du trajet'
         required: false
         example:
-          - rerum
+          - aliquid
         type: 'string[]'
         custom: []
       route:
@@ -134,28 +134,28 @@ endpoints:
         description: 'La route du trajet'
         required: false
         example:
-          - consequatur
+          - commodi
         type: 'string[]'
         custom: []
     cleanBodyParameters:
-      title: voluptate
-      description: 'Tempora autem modi similique et eaque.'
+      title: modi
+      description: 'Eos excepturi aliquam inventore possimus quasi at voluptatem.'
       public: true
-      distance: ipsa
-      duration: debitis
-      max_speed: in
-      avg_speed: sit
+      distance: illo
+      duration: saepe
+      max_speed: necessitatibus
+      avg_speed: voluptatem
       positions:
-        - rerum
+        - aliquid
       route:
-        - consequatur
+        - commodi
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6dhZ3E5D46eafVkb1vcagP8'
+      - 'Bearer ck6Eh14P58ZdevfDabg6aV3'
     controller: null
     method: null
     route: null
@@ -184,11 +184,11 @@ endpoints:
         name: id
         description: "L'identifiant du trajet"
         required: true
-        example: ut
+        example: officia
         type: string
         custom: []
     cleanUrlParameters:
-      id: ut
+      id: officia
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -208,7 +208,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6gZVvahD84dc1a3kbE5P6fe'
+      - 'Bearer Z3D61PhVevd6agE8ac5kbf4'
     controller: null
     method: null
     route: null
@@ -238,11 +238,11 @@ endpoints:
         name: id
         description: "L'identifiant du trajet"
         required: true
-        example: nam
+        example: vel
         type: string
         custom: []
     cleanUrlParameters:
-      id: nam
+      id: vel
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -250,49 +250,49 @@ endpoints:
         name: title
         description: 'Le titre du trajet'
         required: true
-        example: odit
+        example: cumque
         type: string
         custom: []
       description:
         name: description
         description: 'La description du trajet'
         required: false
-        example: 'Velit vitae earum iure sit et quia.'
+        example: 'Vel iste nisi quam consequatur numquam repellat.'
         type: string
         custom: []
       public:
         name: public
         description: 'Le trajet est-il public ?'
         required: false
-        example: true
+        example: false
         type: boolean
         custom: []
       distance:
         name: distance
         description: 'La distance du trajet'
         required: false
-        example: repudiandae
+        example: id
         type: numeric
         custom: []
       duration:
         name: duration
         description: 'La durée du trajet'
         required: false
-        example: necessitatibus
+        example: voluptas
         type: numeric
         custom: []
       max_speed:
         name: max_speed
         description: 'La vitesse maximale du trajet'
         required: false
-        example: asperiores
+        example: distinctio
         type: numeric
         custom: []
       avg_speed:
         name: avg_speed
         description: 'La vitesse moyenne du trajet'
         required: false
-        example: rem
+        example: tenetur
         type: numeric
         custom: []
       positions:
@@ -300,7 +300,7 @@ endpoints:
         description: 'Les positions du trajet'
         required: false
         example:
-          - aut
+          - quam
         type: 'string[]'
         custom: []
       route:
@@ -308,28 +308,28 @@ endpoints:
         description: 'La route du trajet'
         required: false
         example:
-          - et
+          - ipsum
         type: 'string[]'
         custom: []
     cleanBodyParameters:
-      title: odit
-      description: 'Velit vitae earum iure sit et quia.'
-      public: true
-      distance: repudiandae
-      duration: necessitatibus
-      max_speed: asperiores
-      avg_speed: rem
+      title: cumque
+      description: 'Vel iste nisi quam consequatur numquam repellat.'
+      public: false
+      distance: id
+      duration: voluptas
+      max_speed: distinctio
+      avg_speed: tenetur
       positions:
-        - aut
+        - quam
       route:
-        - et
+        - ipsum
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 3Vea41D56ghb6ckvPd8EfZa'
+      - 'Bearer 6PfDbvc63eaag5dE8ZVk41h'
     controller: null
     method: null
     route: null
@@ -358,11 +358,11 @@ endpoints:
         name: id
         description: "L'identifiant du trajet"
         required: true
-        example: nulla
+        example: provident
         type: string
         custom: []
     cleanUrlParameters:
-      id: nulla
+      id: provident
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -373,7 +373,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer V3cv65Zbag1eaf4hdk68EPD'
+      - 'Bearer 438cbgvkZVdae1DafhE5P66'
     controller: null
     method: null
     route: null

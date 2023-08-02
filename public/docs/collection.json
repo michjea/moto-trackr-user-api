@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "moto-trackr-user-api",
-        "_postman_id": "815e424d-d5d2-42a5-8378-cd04ed22ec42",
+        "_postman_id": "44d84189-7c5b-4cf4-a337-00dc6bbe67fe",
         "description": "API for the Moto Trackr app",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"est\",\"email\":\"lauriane62@example.net\",\"password\":\"7DVcfbQU>b::\",\"device_name\":\"beatae\",\"password_confirmation\":\"et\"}"
+                            "raw": "{\"name\":\"odit\",\"email\":\"umayer@example.org\",\"password\":\";b3[>C,\",\"device_name\":\"voluptatem\",\"password_confirmation\":\"quia\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"nienow.serena@example.org\",\"password\":\"l0fn*^Y\",\"device_name\":\"voluptatem\"}"
+                            "raw": "{\"email\":\"tromp.maribel@example.net\",\"password\":\"+u,tK1\",\"device_name\":\"libero\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,18 +155,18 @@
                             "query": [
                                 {
                                     "key": "offset",
-                                    "value": "11",
+                                    "value": "13",
                                     "description": "Le nombre de trajets \u00e0 ignorer. Defaults to 0.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "limit",
-                                    "value": "11",
+                                    "value": "17",
                                     "description": "Le nombre de trajets \u00e0 afficher. Defaults to 10.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/feed?offset=11&limit=11"
+                            "raw": "{{baseUrl}}\/api\/feed?offset=13&limit=17"
                         },
                         "method": "GET",
                         "header": [
@@ -277,7 +277,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"voluptate\",\"description\":\"Tempora autem modi similique et eaque.\",\"public\":true,\"distance\":\"ipsa\",\"duration\":\"debitis\",\"max_speed\":\"in\",\"avg_speed\":\"sit\",\"positions\":[\"rerum\"],\"route\":[\"consequatur\"]}"
+                            "raw": "{\"title\":\"modi\",\"description\":\"Eos excepturi aliquam inventore possimus quasi at voluptatem.\",\"public\":true,\"distance\":\"illo\",\"duration\":\"saepe\",\"max_speed\":\"necessitatibus\",\"avg_speed\":\"voluptatem\",\"positions\":[\"aliquid\"],\"route\":[\"commodi\"]}"
                         },
                         "description": ""
                     },
@@ -295,7 +295,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ut",
+                                    "value": "officia",
                                     "description": "L'identifiant du trajet"
                                 }
                             ]
@@ -348,7 +348,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nam",
+                                    "value": "vel",
                                     "description": "L'identifiant du trajet"
                                 }
                             ]
@@ -366,7 +366,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"odit\",\"description\":\"Velit vitae earum iure sit et quia.\",\"public\":true,\"distance\":\"repudiandae\",\"duration\":\"necessitatibus\",\"max_speed\":\"asperiores\",\"avg_speed\":\"rem\",\"positions\":[\"aut\"],\"route\":[\"et\"]}"
+                            "raw": "{\"title\":\"cumque\",\"description\":\"Vel iste nisi quam consequatur numquam repellat.\",\"public\":false,\"distance\":\"id\",\"duration\":\"voluptas\",\"max_speed\":\"distinctio\",\"avg_speed\":\"tenetur\",\"positions\":[\"quam\"],\"route\":[\"ipsum\"]}"
                         },
                         "description": ""
                     },
@@ -384,7 +384,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nulla",
+                                    "value": "provident",
                                     "description": "L'identifiant du trajet"
                                 }
                             ]
@@ -568,7 +568,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"nulla\",\"email\":\"buddy72@example.net\",\"password\":\",}uDe=`QVlr\",\"password_confirmation\":\"dolorem\"}"
+                            "raw": "{\"name\":\"sequi\",\"email\":\"hoeger.norval@example.org\",\"password\":\"{T[SE&;npxOPP\",\"password_confirmation\":\"repellat\"}"
                         },
                         "description": ""
                     },
@@ -586,7 +586,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "aut",
+                                    "value": "et",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -639,7 +639,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "omnis",
+                                    "value": "delectus",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -657,7 +657,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"et\",\"email\":\"sipes.paige@example.org\",\"password\":\"*O\\\/._@p?'e'*m7\\\\+x|\",\"password_confirmation\":\"quia\"}"
+                            "raw": "{\"name\":\"quibusdam\",\"email\":\"era.pagac@example.org\",\"password\":\"Bd'*(Z^\",\"password_confirmation\":\"et\"}"
                         },
                         "description": ""
                     },
@@ -675,7 +675,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "hic",
+                                    "value": "possimus",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -705,12 +705,12 @@
                             "query": [
                                 {
                                     "key": "query",
-                                    "value": "enim",
+                                    "value": "quibusdam",
                                     "description": "The query to search for.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/users\/search?query=enim"
+                            "raw": "{{baseUrl}}\/api\/users\/search?query=quibusdam"
                         },
                         "method": "GET",
                         "header": [
@@ -760,7 +760,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "deleniti",
+                                    "value": "illo",
                                     "description": "The ID of the user to unfollow."
                                 }
                             ]
@@ -793,7 +793,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "excepturi",
+                                    "value": "et",
                                     "description": "The ID of the user to follow."
                                 }
                             ]

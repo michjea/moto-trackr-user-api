@@ -30,43 +30,43 @@ endpoints:
         name: name
         description: "Le nom de l'utilisateur"
         required: true
-        example: est
+        example: odit
         type: string
         custom: []
       email:
         name: email
         description: "L'adresse email de l'utilisateur"
         required: true
-        example: lauriane62@example.net
+        example: umayer@example.org
         type: string
         custom: []
       password:
         name: password
         description: "Le mot de passe de l'utilisateur"
         required: true
-        example: '7DVcfbQU>b::'
+        example: ';b3[>C,'
         type: string
         custom: []
       device_name:
         name: device_name
         description: "Le nom du périphérique de l'utilisateur"
         required: true
-        example: beatae
+        example: voluptatem
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: "La confirmation du mot de passe de l'utilisateur"
         required: true
-        example: et
+        example: quia
         type: string
         custom: []
     cleanBodyParameters:
-      name: est
-      email: lauriane62@example.net
-      password: '7DVcfbQU>b::'
-      device_name: beatae
-      password_confirmation: et
+      name: odit
+      email: umayer@example.org
+      password: ';b3[>C,'
+      device_name: voluptatem
+      password_confirmation: quia
     fileParameters: []
     responses: []
     responseFields: []
@@ -102,27 +102,27 @@ endpoints:
         name: email
         description: "L'adresse email de l'utilisateur"
         required: true
-        example: nienow.serena@example.org
+        example: tromp.maribel@example.net
         type: string
         custom: []
       password:
         name: password
         description: "Le mot de passe de l'utilisateur"
         required: true
-        example: 'l0fn*^Y'
+        example: '+u,tK1'
         type: string
         custom: []
       device_name:
         name: device_name
         description: "Le nom du périphérique de l'utilisateur"
         required: true
-        example: voluptatem
+        example: libero
         type: string
         custom: []
     cleanBodyParameters:
-      email: nienow.serena@example.org
-      password: 'l0fn*^Y'
-      device_name: voluptatem
+      email: tromp.maribel@example.net
+      password: '+u,tK1'
+      device_name: libero
     fileParameters: []
     responses: []
     responseFields: []

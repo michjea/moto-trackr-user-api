@@ -26,23 +26,23 @@ paths:
                 name:
                   type: string
                   description: "Le nom de l'utilisateur"
-                  example: est
+                  example: odit
                 email:
                   type: string
                   description: "L'adresse email de l'utilisateur"
-                  example: lauriane62@example.net
+                  example: umayer@example.org
                 password:
                   type: string
                   description: "Le mot de passe de l'utilisateur"
-                  example: '7DVcfbQU>b::'
+                  example: ';b3[>C,'
                 device_name:
                   type: string
                   description: "Le nom du périphérique de l'utilisateur"
-                  example: beatae
+                  example: voluptatem
                 password_confirmation:
                   type: string
                   description: "La confirmation du mot de passe de l'utilisateur"
-                  example: et
+                  example: quia
               required:
                 - name
                 - email
@@ -69,15 +69,15 @@ paths:
                 email:
                   type: string
                   description: "L'adresse email de l'utilisateur"
-                  example: nienow.serena@example.org
+                  example: tromp.maribel@example.net
                 password:
                   type: string
                   description: "Le mot de passe de l'utilisateur"
-                  example: 'l0fn*^Y'
+                  example: '+u,tK1'
                 device_name:
                   type: string
                   description: "Le nom du périphérique de l'utilisateur"
-                  example: voluptatem
+                  example: libero
               required:
                 - email
                 - password
@@ -119,22 +119,22 @@ paths:
           in: query
           name: offset
           description: 'Le nombre de trajets à ignorer. Defaults to 0.'
-          example: 11
+          example: 13
           required: false
           schema:
             type: integer
             description: 'Le nombre de trajets à ignorer. Defaults to 0.'
-            example: 11
+            example: 13
         -
           in: query
           name: limit
           description: 'Le nombre de trajets à afficher. Defaults to 10.'
-          example: 11
+          example: 17
           required: false
           schema:
             type: integer
             description: 'Le nombre de trajets à afficher. Defaults to 10.'
-            example: 11
+            example: 17
         -
           in: header
           name: Authorization
@@ -210,11 +210,11 @@ paths:
                 title:
                   type: string
                   description: 'Le titre du trajet'
-                  example: voluptate
+                  example: modi
                 description:
                   type: string
                   description: 'La description du trajet'
-                  example: 'Tempora autem modi similique et eaque.'
+                  example: 'Eos excepturi aliquam inventore possimus quasi at voluptatem.'
                 public:
                   type: boolean
                   description: 'Le trajet est-il public ?'
@@ -222,31 +222,31 @@ paths:
                 distance:
                   type: numeric
                   description: 'La distance du trajet'
-                  example: ipsa
+                  example: illo
                 duration:
                   type: numeric
                   description: 'La durée du trajet'
-                  example: debitis
+                  example: saepe
                 max_speed:
                   type: numeric
                   description: 'La vitesse maximale du trajet'
-                  example: in
+                  example: necessitatibus
                 avg_speed:
                   type: numeric
                   description: 'La vitesse moyenne du trajet'
-                  example: sit
+                  example: voluptatem
                 positions:
                   type: array
                   description: 'Les positions du trajet'
                   example:
-                    - rerum
+                    - aliquid
                   items:
                     type: string
                 route:
                   type: array
                   description: 'La route du trajet'
                   example:
-                    - consequatur
+                    - commodi
                   items:
                     type: string
               required:
@@ -304,43 +304,43 @@ paths:
                 title:
                   type: string
                   description: 'Le titre du trajet'
-                  example: odit
+                  example: cumque
                 description:
                   type: string
                   description: 'La description du trajet'
-                  example: 'Velit vitae earum iure sit et quia.'
+                  example: 'Vel iste nisi quam consequatur numquam repellat.'
                 public:
                   type: boolean
                   description: 'Le trajet est-il public ?'
-                  example: true
+                  example: false
                 distance:
                   type: numeric
                   description: 'La distance du trajet'
-                  example: repudiandae
+                  example: id
                 duration:
                   type: numeric
                   description: 'La durée du trajet'
-                  example: necessitatibus
+                  example: voluptas
                 max_speed:
                   type: numeric
                   description: 'La vitesse maximale du trajet'
-                  example: asperiores
+                  example: distinctio
                 avg_speed:
                   type: numeric
                   description: 'La vitesse moyenne du trajet'
-                  example: rem
+                  example: tenetur
                 positions:
                   type: array
                   description: 'Les positions du trajet'
                   example:
-                    - aut
+                    - quam
                   items:
                     type: string
                 route:
                   type: array
                   description: 'La route du trajet'
                   example:
-                    - et
+                    - ipsum
                   items:
                     type: string
               required:
@@ -365,7 +365,7 @@ paths:
         in: path
         name: id
         description: "L'identifiant du trajet"
-        example: ut
+        example: officia
         required: true
         schema:
           type: string
@@ -479,19 +479,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user.'
-                  example: nulla
+                  example: sequi
                 email:
                   type: string
                   description: 'The email of the user.'
-                  example: buddy72@example.net
+                  example: hoeger.norval@example.org
                 password:
                   type: string
                   description: 'The password of the user.'
-                  example: ',}uDe=`QVlr'
+                  example: '{T[SE&;npxOPP'
                 password_confirmation:
                   type: string
                   description: 'The password confirmation of the user.'
-                  example: dolorem
+                  example: repellat
               required:
                 - name
                 - email
@@ -550,19 +550,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user.'
-                  example: et
+                  example: quibusdam
                 email:
                   type: string
                   description: 'The email of the user.'
-                  example: sipes.paige@example.org
+                  example: era.pagac@example.org
                 password:
                   type: string
                   description: 'The password of the user.'
-                  example: "*O/._@p?'e'*m7\\+x|"
+                  example: "Bd'*(Z^"
                 password_confirmation:
                   type: string
                   description: 'The password confirmation of the user.'
-                  example: quia
+                  example: et
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -583,7 +583,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: aut
+        example: et
         required: true
         schema:
           type: string
@@ -597,12 +597,12 @@ paths:
           in: query
           name: query
           description: 'The query to search for.'
-          example: enim
+          example: quibusdam
           required: true
           schema:
             type: string
             description: 'The query to search for.'
-            example: enim
+            example: quibusdam
         -
           in: header
           name: Authorization
@@ -646,7 +646,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user to unfollow.'
-        example: deleniti
+        example: illo
         required: true
         schema:
           type: string
@@ -671,7 +671,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user to follow.'
-        example: excepturi
+        example: et
         required: true
         schema:
           type: string

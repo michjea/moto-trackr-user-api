@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5ZhD1aPVekgb38d64ac6vfE'
+      - 'Bearer E5a8ZcDbvVhf616egdPa4k3'
     controller: null
     method: null
     route: null
@@ -88,7 +88,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer b66Z8c35vVfgaa41kdEPeDh'
+      - 'Bearer aEdh4D6cfkPveaV3b68Z5g1'
     controller: null
     method: null
     route: null
@@ -133,7 +133,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer gd6va436feV5chEk8DZ1bPa'
+      - 'Bearer P51b6kcdaDE3V4Zv86efhag'
     controller: null
     method: null
     route: null
@@ -166,42 +166,42 @@ endpoints:
         name: name
         description: 'The name of the user.'
         required: true
-        example: nulla
+        example: sequi
         type: string
         custom: []
       email:
         name: email
         description: 'The email of the user.'
         required: true
-        example: buddy72@example.net
+        example: hoeger.norval@example.org
         type: string
         custom: []
       password:
         name: password
         description: 'The password of the user.'
         required: true
-        example: ',}uDe=`QVlr'
+        example: '{T[SE&;npxOPP'
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The password confirmation of the user.'
         required: true
-        example: dolorem
+        example: repellat
         type: string
         custom: []
     cleanBodyParameters:
-      name: nulla
-      email: buddy72@example.net
-      password: ',}uDe=`QVlr'
-      password_confirmation: dolorem
+      name: sequi
+      email: hoeger.norval@example.org
+      password: '{T[SE&;npxOPP'
+      password_confirmation: repellat
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6c5EvP3kga6dZ8eVa4D1hfb'
+      - 'Bearer he5gP1fav6ZcaEkD8d43b6V'
     controller: null
     method: null
     route: null
@@ -230,11 +230,11 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: aut
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      id: aut
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -254,7 +254,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z1Phf8b435VeakvEaD6cdg6'
+      - 'Bearer eZ1k5fdcD6gh43a6VbEvPa8'
     controller: null
     method: null
     route: null
@@ -284,11 +284,11 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: omnis
+        example: delectus
         type: string
         custom: []
     cleanUrlParameters:
-      id: omnis
+      id: delectus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -296,42 +296,42 @@ endpoints:
         name: name
         description: 'The name of the user.'
         required: false
-        example: et
+        example: quibusdam
         type: string
         custom: []
       email:
         name: email
         description: 'The email of the user.'
         required: false
-        example: sipes.paige@example.org
+        example: era.pagac@example.org
         type: string
         custom: []
       password:
         name: password
         description: 'The password of the user.'
         required: false
-        example: "*O/._@p?'e'*m7\\+x|"
+        example: "Bd'*(Z^"
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The password confirmation of the user.'
         required: false
-        example: quia
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      name: et
-      email: sipes.paige@example.org
-      password: "*O/._@p?'e'*m7\\+x|"
-      password_confirmation: quia
+      name: quibusdam
+      email: era.pagac@example.org
+      password: "Bd'*(Z^"
+      password_confirmation: et
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer V156ecbk86f4dDPhaEag3Zv'
+      - 'Bearer vbdkeVEagD4hafZ35P66c81'
     controller: null
     method: null
     route: null
@@ -360,11 +360,11 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: hic
+        example: possimus
         type: string
         custom: []
     cleanUrlParameters:
-      id: hic
+      id: possimus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -375,7 +375,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a1bhE5vZVPgae8k66Df4cd3'
+      - 'Bearer VD5Z8fvhcb41g6e6E3akdPa'
     controller: null
     method: null
     route: null
@@ -406,11 +406,11 @@ endpoints:
         name: query
         description: 'The query to search for.'
         required: true
-        example: enim
+        example: quibusdam
         type: string
         custom: []
     cleanQueryParameters:
-      query: enim
+      query: quibusdam
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -428,7 +428,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vh4afV5kgPD66Z8ac1bdE3e'
+      - 'Bearer aZE3e4kv66Dd8Phbga1V5fc'
     controller: null
     method: null
     route: null
@@ -457,11 +457,11 @@ endpoints:
         name: id
         description: 'The ID of the user to unfollow.'
         required: true
-        example: deleniti
+        example: illo
         type: string
         custom: []
     cleanUrlParameters:
-      id: deleniti
+      id: illo
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -472,7 +472,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dvV86a46ZcEhPf1g35akDeb'
+      - 'Bearer 13EDafd8a6h4Z6e5vbVPgkc'
     controller: null
     method: null
     route: null
@@ -501,11 +501,11 @@ endpoints:
         name: id
         description: 'The ID of the user to follow.'
         required: true
-        example: excepturi
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      id: excepturi
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -516,7 +516,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer g5af8vcPhkb6Z3a64E1deDV'
+      - 'Bearer bDP4V1e6dvkg6Z3ac8fa5hE'
     controller: null
     method: null
     route: null

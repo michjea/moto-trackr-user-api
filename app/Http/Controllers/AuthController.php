@@ -28,6 +28,9 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
+        $output = new \Symfony\Component\Console\Output\ConsoleOutput();
+        $output->writeln("User is registering");
+
         // Validate the request...
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -36,13 +39,20 @@ class AuthController extends Controller
             'device_name' => 'required|string|max:255'
         ]);
 
+
+        $output->writeln("User " . $validated['name'] . " is registering");
+
         $user = new User();
         $user->name = $validated['name'];
         $user->email = $validated['email'];
         $user->password = Hash::make($validated['password']);
         $user->save();
 
+        $output->writeln("User " . $validated['name'] . " has been registered");
+
         $token = $user->createToken($validated['device_name'])->plainTextToken;
+
+        $output->writeln("User " . $validated['name'] . " has a new token " . $token);
 
         return response()->json([
             'user' => $user,

@@ -118,8 +118,7 @@ class RideController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // Validate and update the request...
-        $validated = $request->validate([
+        $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'description' => 'string|max:255',
             'public' => 'boolean',
@@ -131,6 +130,14 @@ class RideController extends Controller
             'route' => 'array',
         ]);
 
+        // Si la validation échoue, renvoyer une réponse JSON avec les erreurs de validation
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
         $ride = Ride::find($id);
 
         if ($ride->user_id != $request->user()->id) {
@@ -139,17 +146,8 @@ class RideController extends Controller
             ], 401);
         }
 
-        $ride->title = $validated['title'];
-        $ride->description = $validated['description'];
-        $ride->public = $validated['public'];
-        $ride->distance = $validated['distance'];
-        $ride->duration = $validated['duration'];
-        $ride->max_speed = $validated['max_speed'];
-        $ride->avg_speed = $validated['avg_speed'];
-        $ride->positions = $validated['positions'];
-        $ride->user_id = $request->user()->id;
 
-        $ride->save();
+        $ride->update($validator->validated());
 
         return response()->json([
             'message' => 'Ride updated'

@@ -12,7 +12,20 @@
             <directory suffix="Test.php">./tests/Feature</directory>
         </testsuite>
     </testsuites>
-    <source>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+            <exclude>
+                <directory suffix=".php">./app/Exceptions</directory>
+                <directory suffix=".php">./app/Http/Middleware</directory>
+                <directory suffix=".php">./app/Providers</directory>
+                <directory suffix=".php">./app/Console</directory>
+                <directory suffix=".php">./app/Actions</directory>
+                <directory suffix=".php">./app/Models</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <!--<source>
         <include>
             <directory suffix=".php">./app</directory>
         </include>
@@ -22,12 +35,9 @@
             <directory suffix=".php">./app/Providers</directory>
             <directory suffix=".php">./app/Console</directory>
             <directory suffix=".php">./app/Actions</directory>
-<<<<<<< HEAD
             <directory suffix=".php">./app/Models</directory>
-=======
->>>>>>> 1023089 (anged deploy pipeline to match new route)
         </exclude>
-    </source>
+    </source>-->
     <php>
         <env name="APP_ENV" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>

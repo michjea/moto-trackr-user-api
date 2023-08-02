@@ -4,98 +4,41 @@
 
 This is the user API for the Moto Trackr application.
 
+## Documentation
+
+The documentation for this API can be found in /public/docs/index.html.
+
+## Installation for Bachelor's Thesis
+
+1.  Run Docker Compose
+
+        ```bash
+        docker-compose up -d
+        ```
+
+2.  Access the API at `http://localhost:8080`
+
 ## Installation and Setup Instructions for Local Development
 
 1. Clone this repository.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. Start Apache and MySQL servers using XAMPP.
-=======
-=======
->>>>>>> c34fabb (changed deploy pipeline to match new route)
-Composer install using `composer install`.
+2. Install dependencies using `composer install`.
 
-Generate application key using `php artisan key:generate`.
+3. Copy `.env.example` to `.env`.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c34fabb (changed deploy pipeline to match new route)
-Apply migrations using `php artisan migrate`.
->>>>>>> c34fabb (changed deploy pipeline to match new route)
-=======
-Apply migrations using `php artisan migrate`. 2. Start Apache and MySQL servers using XAMPP.
->>>>>>> 1023089 (anged deploy pipeline to match new route)
+4. Start Apache and MySQL servers using XAMPP.
 
-3. Generate key using `php artisan key:generate`.
+    - Or start Docker mysql image using `docker run --name mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql:latest`
+    - Start Docker neo4j image `docker run --name neo4j -p 7474:7474 -p 7687:7687 -d -e NEO4J_AUTH=neo4j/secret neo4j:latest`
 
-4. Apply migrations using `php artisan migrate`.
+5. Generate key using `php artisan key:generate`.
 
-5. Start server using `php artisan serve`.
+6. Apply migrations using `php artisan migrate`.
+
+7. Start server using `php artisan serve`.
 
 -   Get routes using `php artisan route:list`.
 
-## API Endpoints
+8. Start tests using `php artisan test`.
 
-### User
-
-#### Register
-
-`POST /api/auth/register`
-
-##### Request
-
-```json
-{
-    "name": "John Doe",
-    "email": "johndoe@example.com",
-    "password": "mysupersecurepassword",
-    "password_confirmation": "mysupersecurepassword",
-    "device_name": "Postman"
-}
-```
-
-##### Response
-
-```json
-{
-    "user": {
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "updated_at": "2023-06-02T17:28:42.000000Z",
-        "created_at": "2023-06-02T17:28:42.000000Z",
-        "id": 1
-    },
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
-}
-```
-
-#### Login
-
-`POST /api/auth/login`
-
-##### Request
-
-```json
-{
-    "email": "johndoe@example.com",
-    "password": "mysupersecurepassword",
-    "device_name": "Postman"
-}
-```
-
-##### Response
-
-```json
-{
-    "user": {
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "updated_at": "2023-06-02T17:28:42.000000Z",
-        "created_at": "2023-06-02T17:28:42.000000Z",
-        "id": 1
-    },
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
-}
-```
+9. Generate documentation using `php artisan scribe:generate`.
